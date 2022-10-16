@@ -3,7 +3,7 @@ import { createProxyMiddleware } from 'http-proxy-middleware';
 module.exports = (app: any) => {
     app.use(
         createProxyMiddleware('', {
-            target: 'http://localhost:5000',
+            target: process.env.PROXY_URL,
             changeOrigin: true,
         }),
     );

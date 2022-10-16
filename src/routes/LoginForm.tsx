@@ -25,6 +25,7 @@ const LoginForm = () => {
                         password: password.value,
                     };
                     const a = await axios.post('/users/login', data);
+
                     navigate('/main');
                 }
             } catch (err: any) {
