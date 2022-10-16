@@ -1,7 +1,5 @@
 import { SearchedPlaceInfo, Position } from 'store/modules/plan';
 
-const ps = new kakao.maps.services.Places();
-
 const searchImageByKakaoAPI = async (
     keyword: string,
 ): Promise<string | undefined> => {
@@ -28,6 +26,8 @@ const searchByKeyword = async (
     keyword: string | undefined,
 ): Promise<SearchedPlaceInfo[]> => {
     return new Promise((resolve, reject) => {
+        const ps = new kakao.maps.services.Places();
+
         ps.keywordSearch(`${keyword}`, async (data, status) => {
             if (status === kakao.maps.services.Status.OK) {
                 const list: any = data.map(
@@ -63,6 +63,8 @@ const pickByKeyword = async (
     keyword: string | undefined,
 ): Promise<Position> => {
     return new Promise((resolve, reject) => {
+        const ps = new kakao.maps.services.Places();
+
         ps.keywordSearch(`${keyword}`, async (data, status) => {
             if (status === kakao.maps.services.Status.OK) {
                 const place = data[0];
