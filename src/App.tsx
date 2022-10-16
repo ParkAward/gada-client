@@ -27,7 +27,7 @@ import Profile from 'routes/Profile';
 import Share from 'routes/Share';
 
 // Axios
-const baseURL = 'http://localhost:5000';
+const baseURL = process.env.PROXY_URL;
 axios.defaults.baseURL = baseURL;
 axios.defaults.withCredentials = true;
 
