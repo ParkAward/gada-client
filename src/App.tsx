@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -27,7 +27,7 @@ import Profile from 'routes/Profile';
 import Share from 'routes/Share';
 
 // Axios
-const baseURL = process.env.PROXY_URL;
+const baseURL = process.env.REACT_APP_PROXY_URL;
 axios.defaults.baseURL = baseURL;
 axios.defaults.withCredentials = true;
 
