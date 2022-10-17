@@ -29,6 +29,8 @@ const LoginForm = () => {
                     navigate('/main');
                 }
             } catch (err: any) {
+                console.log(err);
+
                 const { response } = err;
                 alert(response.data.message);
             }
