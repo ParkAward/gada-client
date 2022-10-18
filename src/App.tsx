@@ -30,6 +30,7 @@ import Share from 'routes/Share';
 const baseURL = process.env.REACT_APP_PROXY_URL;
 axios.defaults.baseURL = baseURL;
 axios.defaults.withCredentials = true;
+axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 const App: FC = () => {
     return (
