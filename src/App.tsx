@@ -26,7 +26,7 @@ import NotFound from 'routes/NotFound';
 import Profile from 'routes/Profile';
 import Share from 'routes/Share';
 
-// Axios
+// Axios a
 const baseURL = process.env.REACT_APP_PROXY_URL;
 axios.defaults.baseURL = baseURL;
 axios.defaults.withCredentials = true;
