@@ -43,12 +43,14 @@ const LoginForm = () => {
                 autoComplete="email"
                 type="email"
                 placeholder="Email"
+                value="lovehp30@gmail.com"
                 name="email"
             />
             <Password
                 autoComplete="current-password"
                 placeholder="Password"
                 type="password"
+                value="1234"
                 name="password"
             />
             <LinkContainer>
