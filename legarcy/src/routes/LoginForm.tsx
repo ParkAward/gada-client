@@ -24,10 +24,9 @@ const LoginForm = () => {
                         email: email.value,
                         password: password.value,
                     };
-                    console.log(axios.defaults);
-                    const a = await axios.post('/users/login', data, {
-                        withCredentials: true,
-                    });
+                    // const a = await axios.post('/users/login', data, {
+                    //     withCredentials: true,
+                    // });
                     navigate('/main');
                 }
             } catch (err: any) {
